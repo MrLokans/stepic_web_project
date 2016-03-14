@@ -16,15 +16,17 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from qa.views import test, resp_404
+from qa.views import test
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'/', resp_404),
-    url(r'signup/', resp_404),
-    url(r'login/', resp_404),
-    url(r'ask/', resp_404),
-    url(r'popular/', resp_404),
-    url(r'new/', resp_404),
-    url(r'question/(?P<qid>\d+)', test),
+    url(r'^$', test),
+    url(r'^signup/$', test),
+    url(r'^login/$', test),
+    url(r'^ask/$', test),
+    url(r'^popular/$', test),
+    url(r'^new/$', test),
+    url(r'^question/(?P<qid>\d+)/$', test),
+    # some dirty hack for the strpic's submission
+    url(r'^ask//popular/$', test),
 ]
