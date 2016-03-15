@@ -1,8 +1,4 @@
-from django.http import HttpResponse, HttpResponseNotFound
-
-
-def resp_404(request, *args, **kwargs):
-    return HttpResponseNotFound()
+from django.http import HttpResponse
 
 
 def test(request, *args, **kwargs):
