@@ -3,6 +3,8 @@ DATABASE_HOST=localhost
 DATABASE_PASSWORD=somesecretsttring
 DATABASE_NAME=django_project
 
+sudo /etc/init.d/mysql restart
+
 mysql -uroot -e "CREATE DATABASE IF NOT EXISTS $DATABASE_NAME"
 mysql -uroot -e "CREATE USER '$DATABASE_USER'@'$DATABASE_HOST' IDENTIFIED BY '$DATABASE_PASSWORD'"
 mysql -uroot -e "GRANT ALL ON $DATABASE_NAME.* TO '$DATABASE_USER'@'$DATABASE_HOST';"

@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'qa',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -76,6 +77,7 @@ DATABASES = {
         'USER': 'django_user',
         'PASSWORD': 'somesecretsttring',
         'HOST': '127.0.0.1',
+        'PORT': 3306,
     }
 }
 # Internationalization
