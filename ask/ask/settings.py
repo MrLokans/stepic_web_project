@@ -72,14 +72,12 @@ WSGI_APPLICATION = 'ask.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'django_project',
-        # 'USER': 'django_user',
-        # 'PASSWORD': 'somesecretsttring',
-        # 'HOST': '127.0.0.1',
-        # 'PORT': 3306,
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_project',
+        'USER': 'django_user',
+        'PASSWORD': 'somesecretsttring',
+        'HOST': '127.0.0.1',
+        'PORT': 3306,
     }
 }
 # Internationalization
