@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Specific question</title>
+</head>
+<body>
+    {{ question.id }}
+    <h2>{{ question.title }}</h2>
+    <h3>{{ question.text }}</h3>
+    <ul class="answers-list">
+        {% for answer in answers %}
+            <li>{{ answer.text }}</li>
+        {% endfor %}        
+    </ul>
+</body>
+</html>

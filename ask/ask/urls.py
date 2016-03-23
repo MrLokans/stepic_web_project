@@ -16,17 +16,17 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from qa.views import test
+from qa.views import test, page, popular, question
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', test),
+    url(r'^$', page, name="page"),
     url(r'^signup/$', test),
     url(r'^login/$', test),
     url(r'^ask/$', test),
-    url(r'^popular/$', test),
+    url(r'^popular/$', popular, name="popular"),
     url(r'^new/$', test),
-    url(r'^question/(?P<qid>\d+)/$', test),
+    url(r'^question/(?P<qid>\d+)/$', question, name="question-details"),
     # some dirty hack for the strpic's submission
     url(r'^ask//popular/$', test),
 ]
